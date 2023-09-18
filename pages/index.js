@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
-import FeedbackForm from "@components/FeedbackForm";
+import ResetForm from "@components/ResetForm";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
         <Header title="Reset Password" />
         <hr />
         <p className="description">Buat Password Baru dibawah ini.</p>
-        <FeedbackForm />
+        <ResetForm />
       </main>
       <Footer />
     </div>
