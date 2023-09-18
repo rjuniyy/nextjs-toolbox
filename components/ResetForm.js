@@ -39,7 +39,7 @@ export default function ResetForm() {
     const token = router.query.token;
 
     try {
-      const { error } = await supabase.auth.updateUser(token, {
+      const { data, error } = await supabase.auth.updateUser({
         password: password,
       });
       console.log(token);
