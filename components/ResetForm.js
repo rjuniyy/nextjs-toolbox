@@ -39,7 +39,10 @@ export default function ResetForm() {
     const token = router.query.token;
 
     try {
-      const { error } = await supabase.auth.updateUser(token, { password });
+      const { error } = await supabase.auth.updateUser(token, {
+        password: password,
+      });
+      console.log(token);
       if (error) {
         setMessage("Password reset failed.");
       } else {
